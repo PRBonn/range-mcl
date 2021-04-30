@@ -12,8 +12,8 @@ Online localization demo.
 
 
 <p float="left">
-  <img src="data/figs/mesh-traj.png" width="350" />
-  <img src="data/figs/submap.png" width="500" /> 
+  <img src="data/figs/mesh-traj.png" width="340" />
+  <img src="data/figs/submap.png" width="480" /> 
 </p>
 
 Visualizations: Left: the triangular mesh and the localization results; Right: Sub-tile maps 
