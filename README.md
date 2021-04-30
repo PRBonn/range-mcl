@@ -11,7 +11,7 @@ It uses a novel sensor model with MCL to achieve 3D LiDAR global localization an
 Online localization demo.
 
 <img src="data/figs/mesh-traj.png" width="350">
-<img src="data/figs/submap.png" width="500">
+<img src="data/figs/submap.png" width="450">
 
 Visualizations: Left: the triangular mesh and the localization results; Right: Sub-tile maps 
 
