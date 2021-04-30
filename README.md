@@ -23,7 +23,7 @@ Visualizations: Left: the triangular mesh and the localization results; Right: S
 1. [Publication](#Publication)
 2. [Dependencies](#Dependencies)
 3. [How to use](#How-to-use)
-4. [Application](#Related-work)
+4. [Related work](#Related-work)
 5. [License](#License)
 
 ## Publication
