@@ -43,7 +43,7 @@ If you use our implementation in your academic work, please cite the correspondi
 The code was tested with Ubuntu **20.04** with its standard python version **3.8**.
 
 We are using OpenGL to do achieve fast rendering, so you will need an OpenGL capable graphics
-card (we use Nvidia cards, e.g. 1080Ti) to be fast.
+card (we use Nvidia cards, e.g. 2080Ti) to be fast.
 
 - System dependencies related to OpenGL:
 
