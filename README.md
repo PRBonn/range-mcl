@@ -91,7 +91,7 @@ extract the them in the `/data` folder following the recommended [data structure
   python3 build_mesh_map.py
   ```
 Notice that, we used our moving object segmentation method (coming soon) cleaned the scans before building the map. 
-One could also use other methods to clean the clean before the map building.
+One could also use other methods to clean the map.
 
 For fast calculating and generating range and normal data for LiDAR scans, one could find more details [here](src/map_building/c_utils/README.md).
 
