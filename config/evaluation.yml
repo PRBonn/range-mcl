@@ -1,0 +1,27 @@
+# Configuration for localization evaluation
+
+
+# Path where all experiments results are stored.
+result_file: "../results/demo_loc_results.npz"
+
+
+# ----------------------------------------------
+# Parameter settings for evaluation
+#
+# the path of ground truth pose file
+pose_file: '../data/07/poses.txt'
+# the path of calibration file
+calib_file: '../data/07/calib.txt'
+# flag to plot the localization results
+plot_loc_traj: True
+# save the evaluation results
+save_evaluation_results: True
+
+# some parameters
+grid_resolution: 1  # meters
+converge_thres: 5  # meters
+particle_select_ratio: 0.8  # use the top 80 percent to estimate the pose
+convergence_interval: 100  # after N frame we check whether it converges successfully or not
+
+
+

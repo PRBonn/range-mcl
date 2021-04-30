@@ -1,0 +1,7 @@
+pyyaml==5.4.1
+numpy==1.19.5
+matplotlib==3.3.4
+open3d==0.12.0
+PyOpenGL==3.1.5
+PyOpenGL-accelerate==3.1.5
+glfw==2.1.0

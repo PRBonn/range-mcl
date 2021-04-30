@@ -1,0 +1,57 @@
+# Configuration for Range-image-based Monte Carlo Localization
+
+# Inputs
+# the folder of raw LiDAR scans
+scan_folder: '../data/07/velodyne'
+# Mesh map file
+map_file: '../data/mesh_kitti_07.ply'
+# poses used to build the map
+map_pose_file: '../data/07/poses.txt'
+# map poses calibration file
+map_calib_file: '../data/07/calib.txt'
+# ground truth poses file
+pose_file: '../data/07/poses.txt'
+# calibration file
+calib_file: '../data/07/calib.txt'
+
+# Output
+# path to save localization results
+result_path: '../results/demo_loc_results.npz'
+# plot the final localization results
+plot_loc_results: True
+
+# MCL parameters
+# pose tracking or global localization
+pose_tracking: True
+# start frame index
+start_idx: 0
+# resolution of grid still in use for initialization
+grid_res: 1
+# number of particles
+numParticles: 10000
+# when the number of occupied tile map is smaller than the threshold,
+# we say the localization converged.
+converge_thres: 2
+# after convergence, we reduce the number of particles
+# and using only num_reduced particles.
+num_reduced: 100
+# only update the weights when the car is moving larger than the move_thres  
+move_thres: 0.2
+# the sigma of the Gaussian model for yaw estimation in degree
+yaw_sigma: 2.0
+# visualize the localization results online
+visualize: True
+# save the localization results
+save_result: True
+
+# range image parameters
+range_image:
+  height: 64
+  width: 900
+  fov_up: 3.0
+  fov_down: -25.0
+  max_range: 50.0
+  min_range: 2.0
+  render_instanced: True
+  max_instance: 50
+
