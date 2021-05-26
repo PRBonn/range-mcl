@@ -16,7 +16,7 @@ Online localization demo.
   <img src="data/figs/submap.png" width="480" /> 
 </p>
 
-Visualizations: Left: the triangular mesh and the localization results; Right: Sub-tile maps 
+Visualizations: Left: the triangular mesh map and the localization results; Right: Sub-tile maps 
 
 ### Table of Contents
 0. [Introduction](#Range-Image-based-3D-LiDAR-Localization)
