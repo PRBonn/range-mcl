@@ -97,6 +97,8 @@ For fast calculating and generating range and normal data for LiDAR scans, one c
 - We used our moving object segmentation method ([paper](http://www.ipb.uni-bonn.de/pdfs/chen2021ral-iros.pdf)) cleaned the scans before building the map. 
 One could also use other methods to clean the map.
 - To build the mesh map, one need to first get the map reference poses provided by the dataset or obtained use SLAM.
+- For the sake of demonstration, we use the same data from KITTI 07 for both mapping and localization. However, in a real application (e.g. all the experiments in the [paper](http://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf)), the data for mapping and localization are collected in different seasons of the same area.
+- For the sake of demonstration, we use the odometry poses provided by KITTI dataset and add noise to them. In a real application, one doesn't need to add noise to the odometry information (see [motion_model.py](https://github.com/PRBonn/range-mcl/blob/main/src/motion_model.py)).
 
 #### Evaluation
 Once finished the localization process, one would get the localization results at `/results`.
