@@ -90,10 +90,13 @@ extract the them in the `/data` folder following the recommended [data structure
   ```bash
   python3 build_mesh_map.py
   ```
-Notice that, we used our moving object segmentation method (coming soon) cleaned the scans before building the map. 
-One could also use other methods to clean the map.
 
 For fast calculating and generating range and normal data for LiDAR scans, one could find more details [here](src/map_building/c_utils/README.md).
+
+**Important tips**
+- We used our moving object segmentation method ([paper](http://www.ipb.uni-bonn.de/pdfs/chen2021ral-iros.pdf)) cleaned the scans before building the map. 
+One could also use other methods to clean the map.
+- To build the mesh map, one need to first get the map reference poses provided by the dataset or obtained use SLAM.
 
 #### Evaluation
 Once finished the localization process, one would get the localization results at `/results`.
