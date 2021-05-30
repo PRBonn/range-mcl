@@ -32,7 +32,7 @@ If you use our implementation in your academic work, please cite the correspondi
 	@inproceedings{chen2021icra,
 		author = {X. Chen and I. Vizzo and T. L{\"a}be and J. Behley and C. Stachniss},
 		title = {{Range Image-based LiDAR Localization for Autonomous Vehicles}},
-		booktitle = icra,
+		booktitle = {Proc. of the IEEE Intl. Conf. on Robotics \& Automation (ICRA)},
 		year = 2021,
 		url = {http://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf},
 		codeurl = {https://github.com/PRBonn/range-mcl}
