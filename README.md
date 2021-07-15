@@ -94,7 +94,7 @@ extract the them in the `/data` folder following the recommended [data structure
 For fast calculating and generating range and normal data for LiDAR scans, one could find more details [here](src/map_building/c_utils/README.md).
 
 **Important tips**
-- We used our moving object segmentation method ([paper](http://www.ipb.uni-bonn.de/pdfs/chen2021ral-iros.pdf)) to clean the scans before building the map. 
+- We used our moving object segmentation method ([code](https://github.com/PRBonn/LiDAR-MOS)) to clean the scans before building the map. 
 One could also use other methods to clean the map.
 - To build the mesh map, one needs to first get the map reference poses provided by the dataset or obtained use SLAM.
 - For the sake of demonstration, we use the same data from KITTI 07 for both mapping and localization. However, in a real application (e.g. all the experiments in the [paper](http://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf)), the data for mapping and localization are collected in different seasons of the same area.
