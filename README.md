@@ -2,7 +2,7 @@
 
 This repo contains the code for our ICRA2021 paper: Range Image-based LiDAR Localization for Autonomous Vehicles.
 
-Developed by [Xieyuanli Chen](http://www.ipb.uni-bonn.de/xieyuanli-chen/), [Ignacio Vizzo](https://www.ipb.uni-bonn.de/ignacio-vizzo/), [Thomas Läbe](https://www.ipb.uni-bonn.de/thomas-laebe/) and [Jens Behley](https://www.ipb.uni-bonn.de/jens-behley/).
+Developed by [Xieyuanli Chen](https://www.ipb.uni-bonn.de/xieyuanli-chen/), [Ignacio Vizzo](https://www.ipb.uni-bonn.de/ignacio-vizzo/), [Thomas Läbe](https://www.ipb.uni-bonn.de/thomas-laebe/) and [Jens Behley](https://www.ipb.uni-bonn.de/jens-behley/).
  
 It uses a novel sensor model with MCL to achieve 3D LiDAR global localization and pose tracking. The sensor model compares the range image of the current LiDAR scan to the synthetic range images rendered from the triangular mesh to update the weight of particles. This method is simple but can be used with different types of LiDAR scanners in different datasets and environments without fine-tuning.
 
@@ -27,15 +27,13 @@ Visualizations: Left: the triangular mesh map and the localization results; Righ
 5. [License](#License)
 
 ## Publication
-If you use our implementation in your academic work, please cite the corresponding [paper](http://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf):
+If you use our implementation in your academic work, please cite the corresponding [paper](https://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf):
     
 	@inproceedings{chen2021icra,
 		author = {X. Chen and I. Vizzo and T. L{\"a}be and J. Behley and C. Stachniss},
 		title = {{Range Image-based LiDAR Localization for Autonomous Vehicles}},
 		booktitle = {Proc. of the IEEE Intl. Conf. on Robotics \& Automation (ICRA)},
-		year = 2021,
-		url = {http://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf},
-		codeurl = {https://github.com/PRBonn/range-mcl}
+		year = 2021
 	}
 
 ## Dependencies
@@ -70,8 +68,8 @@ card (we use Nvidia cards, e.g. 2080Ti) to be fast.
 ## How to use
 
 ### Quick use
-For a quick demo, one could download the [mesh map](http://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_kitti_07.ply) 
-and LiDAR [data](http://www.ipb.uni-bonn.de/html/projects/range-mcl/kitti-07.zip), 
+For a quick demo, one could download the [mesh map](https://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_kitti_07.ply) 
+and LiDAR [data](https://www.ipb.uni-bonn.de/html/projects/range-mcl/kitti-07.zip), 
 extract the them in the `/data` folder following the recommended [data structure](data/README.md), and then run:
   ```bash
   cd src/
@@ -85,7 +83,7 @@ including building mesh maps, evaluating the localization results and more pre-b
 
 #### Build mesh map 
 To build a mesh map, we use the Poisson surface reconstruction provided by the Open3D library.
-One need to download the LiDAR [data](http://www.ipb.uni-bonn.de/html/projects/range-mcl/kitti-07.zip), 
+One need to download the LiDAR [data](https://www.ipb.uni-bonn.de/html/projects/range-mcl/kitti-07.zip), 
 extract the them in the `/data` folder following the recommended [data structure](data/README.md), and then run:
   ```bash
   python3 build_mesh_map.py
@@ -97,7 +95,7 @@ For fast calculating and generating range and normal data for LiDAR scans, one c
 - We used our moving object segmentation method ([code](https://github.com/PRBonn/LiDAR-MOS)) to clean the scans before building the map. 
 One could also use other methods to clean the map.
 - To build the mesh map, one needs to first get the map reference poses provided by the dataset or obtained use SLAM.
-- For the sake of demonstration, we use the same data from KITTI 07 for both mapping and localization. However, in a real application (e.g. all the experiments in the [paper](http://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf)), the data for mapping and localization are collected in different seasons of the same area.
+- For the sake of demonstration, we use the same data from KITTI 07 for both mapping and localization. However, in a real application (e.g. all the experiments in the [paper](https://www.ipb.uni-bonn.de/pdfs/chen2021icra.pdf)), the data for mapping and localization are collected in different seasons of the same area.
 - For the sake of demonstration, we use the ground truth odometry poses provided by the KITTI dataset and add noise to them. In a real application, one doesn't need to add noise to the odometry information (see [motion_model.py](https://github.com/PRBonn/range-mcl/blob/main/src/motion_model.py)).
 
 #### Evaluation
@@ -108,12 +106,12 @@ For a quick demo, one just need to run
   python3 evaluation.py
   ```
 #### Collection of mesh maps
-Notice that, the mesh maps were generated using the data from [KITTI dataset](http://www.cvlibs.net/datasets/kitti/eval_odometry.php), [MulRan dataset](https://sites.google.com/view/mulran-pr/dataset) and [Apollo dataset](https://apollo.auto/southbay.html).
+Notice that, the mesh maps were generated using the data from [KITTI dataset](https://www.cvlibs.net/datasets/kitti/eval_odometry.php), [MulRan dataset](https://sites.google.com/view/mulran-pr/dataset) and [Apollo dataset](https://apollo.auto/southbay.html).
 Please register on their official website to apply for the original data.
 
-- [KITTI sequence 07](http://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_kitti_07.ply) (original data from [KITTI dataset](http://www.cvlibs.net/datasets/kitti/eval_odometry.php))
-- [MulRan KAIST 02](http://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_mulran_kaist.ply) (original data from [MulRan dataset](https://sites.google.com/view/mulran-pr/dataset))
-- [Apollo SouthBay](http://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_apollo_southbay.ply) (original data from [Apollo dataset](https://apollo.auto/southbay.html))
+- [KITTI sequence 07](https://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_kitti_07.ply) (original data from [KITTI dataset](https://www.cvlibs.net/datasets/kitti/eval_odometry.php))
+- [MulRan KAIST 02](https://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_mulran_kaist.ply) (original data from [MulRan dataset](https://sites.google.com/view/mulran-pr/dataset))
+- [Apollo SouthBay](https://www.ipb.uni-bonn.de/html/projects/range-mcl/mesh_apollo_southbay.ply) (original data from [Apollo dataset](https://apollo.auto/southbay.html))
 
 
 ## Related work
