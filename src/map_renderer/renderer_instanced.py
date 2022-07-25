@@ -246,7 +246,7 @@ class MapRenderer:
     self.instance_data_depth = data[:, :, 0]
     instance_data_depth = np.flipud(
         self.instance_data_depth.reshape(self.instance_data_depth.shape[1], self.instance_data_depth.shape[0]))
-    slice_len = 64
+    slice_len = self._height
     sliced_instances = [instance_data_depth[slice_len*i:slice_len*(i+1)]
                         for i in range(len(instance_data_depth) // slice_len)]
 
