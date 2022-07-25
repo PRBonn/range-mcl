@@ -91,7 +91,7 @@ def init_particles_given_coords(numParticles, coords, init_weight=1.0):
   return np.array(particles, dtype=float)
 
 
-def init_particles_pose_tracking(numParticles, init_pose, noises=[5.0, 5.0, np.pi/6.0], init_weight=1.0):
+def init_particles_pose_tracking(numParticles, init_pose, noises=[10.0, 10.0, np.pi/3.0], init_weight=1.0):
   """ Initialize particles with a noisy initial pose.
     Here, we use ground truth pose with noises defaulted as [±5 meters, ±5 meters, ±π/6 rad]
     to mimic a non-accurate GPS information as a coarse initial guess of the global pose.
@@ -107,12 +107,12 @@ def init_particles_pose_tracking(numParticles, init_pose, noises=[5.0, 5.0, np.p
   rand = np.random.rand
   init_x = init_pose[0, 3]
   init_y = init_pose[1, 3]
-  init_yaw = euler_angles_from_rotation_matrix(init_pose[:3, :3])[2]
+  init_yaw = euler_angles_from_rotation_matrix(init_pose[:3, :3])[2] - 
   
   for i in range(numParticles):
-    x = init_x + noises[0] * rand(1)
-    y = init_y + noises[1] * rand(1)
-    theta = init_yaw + noises[2] * rand(1)
+    x = init_x + noises[0] * rand(1) - noises[0] / 2
+    y = init_y + noises[1] * rand(1) - noises[1] / 2
+    theta = init_yaw + noises[2] * rand(1) - noises[2] / 2
     particles.append([x, y, theta, init_weight])
   
   return np.array(particles, dtype=float)
