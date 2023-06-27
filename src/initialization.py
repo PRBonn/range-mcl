@@ -107,7 +107,7 @@ def init_particles_pose_tracking(numParticles, init_pose, noises=[10.0, 10.0, np
   rand = np.random.rand
   init_x = init_pose[0, 3]
   init_y = init_pose[1, 3]
-  init_yaw = euler_angles_from_rotation_matrix(init_pose[:3, :3])[2] - 
+  init_yaw = euler_angles_from_rotation_matrix(init_pose[:3, :3])[2]
   
   for i in range(numParticles):
     x = init_x + noises[0] * rand(1) - noises[0] / 2
